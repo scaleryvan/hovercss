@@ -1,0 +1,11 @@
+/* Sink */
+@mixin sink($time: .75s){
+    @include hacks();
+    transition: transform $time ease-out;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        transform: translateY(8px);
+    }
+}

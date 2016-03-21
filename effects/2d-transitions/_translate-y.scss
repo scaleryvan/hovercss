@@ -1,0 +1,15 @@
+/*
+* Float
+* @params
+* time 过渡时间
+*/
+@mixin translate-y($distance: 8px, $time: .75s, $ttf: ease-out){
+    @include hacks();
+    transition: transform, $time, $ttf;
+    &:hover,
+    &:focus,
+    &:active {
+        transform: translateY($distance);
+        
+    }
+}

@@ -1,0 +1,17 @@
+/* Pulse */
+@keyframes hovercss-pulse {
+    25% { transform: scale(1.1)}
+    75% { transform: scale(.9)}
+}
+@mixin pulse($time: 1s) {
+    @include hacks();
+    
+    &:hover,
+    &:focus,
+    &:active {
+        animation-name: hovercss-pulse;
+        animation-duration: $time;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}

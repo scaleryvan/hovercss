@@ -1,0 +1,19 @@
+/* Pulse Shrink */
+@keyframes hovercss-pulse-shrink {
+    to {
+        transform: scale(.9)
+    }
+}
+@mixin pulse-shrink($time: .75s){
+    @include hacks();
+    
+    &:hover,
+    &:focus,
+    &:active {
+        animation-name: hovercss-pulse-shrink;
+        animation-duration: $time;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+}

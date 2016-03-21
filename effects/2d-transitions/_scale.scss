@@ -1,0 +1,16 @@
+/*
+* Grow
+* @params
+* time 过渡时间
+* scale 缩放倍数
+*/
+@mixin scale($time: .75s, $scale: 1.1) {
+    @include hacks();
+    transition: transform $time;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        transform: scale($scale);
+    }
+}

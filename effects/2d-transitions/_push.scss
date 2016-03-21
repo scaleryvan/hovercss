@@ -1,0 +1,17 @@
+/* Push */
+@keyframes hovercss-push {
+    50% { transform: scale(.8);}
+    100% { transform: scale(1);}
+}
+@mixin push($time: .3s) {
+    @include hacks();
+    
+    &:hover,
+    &:focus,
+    &:active {
+        animation-name: hovercss-push;
+        animation-duration: $time;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+    }
+}

@@ -1,0 +1,16 @@
+/*
+* Float
+* @params
+* time 过渡时间
+*/
+@mixin float($time: .75s){
+    @include hacks();
+    transition: transform, $time, ease-out;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        transform: translateY(-8px);
+        
+    }
+}

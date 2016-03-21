@@ -1,0 +1,30 @@
+/* Rectangle Out */
+@mixin rectangle-out($bgColor: blue, $cBgColor: #e1e1e1, $fontColor: #fff, $time: .5s){
+    @include hacks();
+    position: relative;
+    background: $cBgColor;
+    transition: color $time;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $bgColor;
+        transform: scale(0);
+        transition: transform $time ease-out;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $fontColor;
+        
+        &:before {
+            transform: scale(1);
+        }
+    }
+}

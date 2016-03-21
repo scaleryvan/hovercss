@@ -1,0 +1,64 @@
+$activeBgColor: #e1e1e1;
+@mixin hacks(){
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0,0,0,0);
+    backface-visibility: hidden;//隐藏旋转元素的背面
+}
+
+/*
+*2d-transitions
+*/
+@import "effects/2d-transitions/bob";
+@import "effects/2d-transitions/bounce-in";
+@import "effects/2d-transitions/bounce-out";
+@import "effects/2d-transitions/buzz-out";
+@import "effects/2d-transitions/buzz";
+@import "effects/2d-transitions/float";
+@import "effects/2d-transitions/hang";
+@import "effects/2d-transitions/pop";
+@import "effects/2d-transitions/pulse-grow";
+@import "effects/2d-transitions/pulse-shrink";
+@import "effects/2d-transitions/pulse";
+@import "effects/2d-transitions/push";
+@import "effects/2d-transitions/rotate";
+@import "effects/2d-transitions/scale-rotate";
+@import "effects/2d-transitions/scale";
+@import "effects/2d-transitions/sink";
+@import "effects/2d-transitions/skew-backward";
+@import "effects/2d-transitions/skew-forward";
+@import "effects/2d-transitions/skew";
+@import "effects/2d-transitions/translate-y";
+@import "effects/2d-transitions/wobble-bottom";
+@import "effects/2d-transitions/wobble-horizontal";
+@import "effects/2d-transitions/wobble-skew";
+@import "effects/2d-transitions/wobble-to-bottom-right";
+@import "effects/2d-transitions/wobble-to-top-right";
+@import "effects/2d-transitions/wobble-top";
+@import "effects/2d-transitions/wobble-vertical";
+
+/*
+* background-transitions
+*/
+@import "effects/background-transitions/bounce-to-bottom";
+@import "effects/background-transitions/bounce-to-left";
+@import "effects/background-transitions/bounce-to-right";
+@import "effects/background-transitions/bounce-to-top";
+@import "effects/background-transitions/fade";
+@import "effects/background-transitions/radial-in";
+@import "effects/background-transitions/radial-out";
+@import "effects/background-transitions/rectangle-in";
+@import "effects/background-transitions/rectangle-out";
+@import "effects/background-transitions/shutter-in-horizontal";
+@import "effects/background-transitions/shutter-in-vertical";
+@import "effects/background-transitions/shutter-out-horizontal";
+@import "effects/background-transitions/shutter-out-vertical";
+@import "effects/background-transitions/sweep-to-bottom";
+@import "effects/background-transitions/sweep-to-left";
+@import "effects/background-transitions/sweep-to-right";
+@import "effects/background-transitions/sweep-to-top";
+
+
+
+

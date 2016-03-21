@@ -1,0 +1,15 @@
+/*
+* Rotate
+* @params time
+* @params deg
+*/
+@mixin rotate($time: .75s, $deg: 4deg) {
+    @include hacks();
+    transition: transform $time;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        transform: rotate($deg);
+    }
+}

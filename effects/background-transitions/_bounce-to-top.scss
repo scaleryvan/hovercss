@@ -1,0 +1,31 @@
+/* Bounce To Top */
+@mixin bounce-to-top($bgColor: blue, $fontColor: #fff, $time: .5s){
+    @include hacks();
+    position: relative;
+    transition: color $time;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $bgColor;
+        transform: scaleY(0);
+        transform-origin: 50% 100%;
+        transition: transform $time ease-out;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $fontColor;
+        
+        &:before {
+            transform: scaleY(1);
+            transition-timing-function: cubic-bezier(.52,1.64,.37,.66);
+        }
+    }
+}

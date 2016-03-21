@@ -1,0 +1,30 @@
+/* Sweep To Bottom */
+@mixin sweep-to-bottom($bgColor: blue, $fontColor: #fff, $time: .5s) {
+    @include hacks();
+    position: relative;
+    transition: color $time;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $bgColor;
+        transform: scaleY(0);
+        transform-origin: 50% 0;
+        transition: transform $time ease-out;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $fontColor;
+        
+        &:before {
+            transform: scaleY(1);
+        }
+    }
+}

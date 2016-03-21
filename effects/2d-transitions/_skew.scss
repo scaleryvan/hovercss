@@ -1,0 +1,11 @@
+/* Skew */
+@mixin skew($deg: -10deg, $time: .75s) {
+    @include hacks();
+    transition: transform $time;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        transform: skew($deg);
+    }
+}

@@ -1,0 +1,31 @@
+/* Bounce To Left */
+@mixin bounce-to-left ($bgColor: blue, $fontColor: #fff, $time: .5s){
+    @include hacks();
+    position: relative;
+    transition: color $time;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $bgColor;
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+        transition: transform $time ease-out;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $fontColor;
+        
+        &:before {
+            transform: scaleX(1);
+            transition-timing-function: cubic-bezier(.52,1.64,.37,.66);
+        }
+    }
+}
